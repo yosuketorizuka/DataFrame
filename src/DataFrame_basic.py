@@ -1,23 +1,12 @@
 import pandas as pd
 
-importFilePath = r'pandas/import/'
+importFilePath = r'DataFrame_basic/import/'
 importFileName = r'Trends_in_deaths.csv'
-exportFilePath = r'pandas/export/'
+exportFilePath = r'DataFrame_basic/export/'
 exportFileName = r'data_result.csv'
 
-def main():
-
-# CSVファイルの読み込み
-    readFile()
-
-# 読み込んだCSVで加工・チェック等の処理
-    check_rate()
-
-#処理結果をOUTPUT
-    outputFile()
-
 def check_rate():
-    
+
 # Output用のDataframeを宣言する
     global df_deathRate_output
 # Input用のDataframeを空で複製
@@ -50,4 +39,11 @@ def readFile():
 
 if __name__ == "__main__":
     
-    main()
+# CSVファイルの読み込み
+    readFile()
+
+# 読み込んだCSVで加工・チェック等の処理
+    check_rate()
+
+#処理結果をOUTPUT
+    outputFile()
